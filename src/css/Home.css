@@ -1,0 +1,105 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.8rem 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #00b0ff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.logo span {
+    color: #4caf50;
+}
+
+
+
+
+
+.home {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    margin-top: 80px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.intro {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    color: #183B4E;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.vid {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.vid video {
+    max-width: 100%;
+    height: auto;
+}
+
+.features {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #183B4E;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature {
+    flex: 1 1 calc(45% - 2rem);
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feature h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #27548A;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
