@@ -2,10 +2,11 @@ import React from "react";
 import "../css/Home.css";
 import { CircleAlert, Cpu, Grid2x2Check, SquareActivity, CircleCheck } from "lucide-react";
 import Navbar from "../Components/Navbar"; 
+import Footer from "../Components/Footer"; 
 
 function Home() {
   return (
-    <div className="home">
+    <><div className="home">
       <Navbar />
 
       <div className="content">
@@ -67,7 +68,10 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+
+
+    </div><div className="footer">   <Footer /></div></>
+    
   );
 }
 

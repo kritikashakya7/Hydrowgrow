@@ -6,19 +6,19 @@ import dht11 from '../Assets/dht11.jpeg';
 import soil from '../Assets/soil.jpg';
 import esp from '../Assets/esp.jpeg';
 import buzz from '../Assets/buzz.png';
+import Footer from "../Components/Footer"; 
 const ComponentsPage = () => {
   return (
-    <div className="components-page">
+    <><div className="components-page">
       <Navbar />
 
       <div className="components-wrapper">
         <div className="component-card small-card">
           <div className="component-image">
-          <img
+            <img
               src={ldr}
               alt="LDR Sensor"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">LDR (Light Dependent Resistor)</h2>
@@ -30,11 +30,10 @@ const ComponentsPage = () => {
 
         <div className="component-card small-card">
           <div className="component-image">
-          <img
+            <img
               src={dht11}
               alt="LDR Sensor"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">DHT11 (Temp & Humidity Sensor)</h2>
@@ -49,8 +48,7 @@ const ComponentsPage = () => {
             <img
               src={soil}
               alt="Soil Moisture Sensor"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">Soil Moisture Sensor</h2>
@@ -65,8 +63,7 @@ const ComponentsPage = () => {
             <img
               src={esp}
               alt="ESP32"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">ESP32 Microcontroller</h2>
@@ -81,8 +78,7 @@ const ComponentsPage = () => {
             <img
               src={buzz}
               alt="Buzzer"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">Buzzer</h2>
@@ -97,21 +93,20 @@ const ComponentsPage = () => {
             <img
               src={buzz}
               alt="Buzzer"
-              className="sensor-image"
-            />
+              className="sensor-image" />
           </div>
           <div className="component-description">
             <h2 className="component-title">Registers and Transistors</h2>
             <p className="description-text">
-            Registers are used inside microcontrollers (like ESP32) to temporarily hold sensor data 
-            (e.g., temperature, moisture) for quick processing and decision-making in automated hydroponic systems. <br/>
-            Transistors are used to switch devices like pumps, lights, or alarms on and off automatically based on sensor readings, 
-            making the hydroponic system more efficient and responsive.
+              Registers are used inside microcontrollers (like ESP32) to temporarily hold sensor data
+              (e.g., temperature, moisture) for quick processing and decision-making in automated hydroponic systems. <br />
+              Transistors are used to switch devices like pumps, lights, or alarms on and off automatically based on sensor readings,
+              making the hydroponic system more efficient and responsive.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </div><div className="footer">   <Footer /></div></>
   );
 };
 

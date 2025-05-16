@@ -31,6 +31,22 @@
     color: #3e89b2;
   }
 
+  .order-now-btn {
+  color: #183B4E;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #7994b5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.order-now-btn:hover {
+  background-color: #adc2dc; /* Darker shade on hover */
+}
+
+
 
   
   
