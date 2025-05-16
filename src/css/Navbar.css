@@ -4,6 +4,7 @@
     align-items: center;
     background-color: #ffffff;
     padding: 1rem 3rem; 
+
    
   }
   
@@ -23,7 +24,7 @@
     color: #183B4E;
     font-weight: 700;
     font-size: 1.1rem;
-    margin-right: 90px;
+    margin-right: 20px;
     transition: color 0.3s ease;
   }
   
@@ -40,6 +41,7 @@
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  margin-right: 20%;
 }
 
 .order-now-btn:hover {
