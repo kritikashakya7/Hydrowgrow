@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import Booking from "./Pages/Booking";
 import Order from "./Pages/Order";
 
+
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/footer" element={<Footer />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/order" element={<Order/>} />
+         
       </Routes>
     </Router>
   );
