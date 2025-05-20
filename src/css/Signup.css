@@ -6,9 +6,11 @@
   align-items: center;
   padding: 2rem;
   box-sizing: border-box;
-  padding-top: 80px;
+  padding-top: 5px;
   position: relative;
   overflow: hidden;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 .signup-card {
@@ -43,7 +45,7 @@
   outline: none;
 }
 
-.signup-btn {
+.button {
   background-color: #7994b5;
   color: rgb(15, 15, 15);
   font-size: 16px;
@@ -55,7 +57,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.signup-btn:hover {
+.button:hover {
   background-color: #27548A;
   transform: scale(1.03);
 }
@@ -65,20 +67,135 @@
   text-align: center;
 }
 
-/* Growing plant images */
-.growing-plant {
-  position: absolute;
-  bottom: 0;
-  width: 100px;
-  height: auto;
+
+
+.sign-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Overlays */
+.signup-background-overlay::before,
+.signup-background-overlay::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+/* Butterfly Gif */
+.butterfly-gif {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  opacity: 0.8;
   z-index: 0;
-  opacity: 0.9;
+  pointer-events: none;
 }
 
-.growing-plant.left {
-  left: 20px;
+/* Reuse login card styles */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.growing-plant.right {
-  right: 20px;
+.signup-card {
+  background-color: #f9f9f9;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  z-index: 1;
+  position: relative;
 }
+
+.signup-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Input and button reuse from your login styles */
+.signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #7994b5;
+  color: rgb(15, 15, 15);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #27548A;
+  transform: scale(1.05);
+}
+
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.login-redirect a {
+  color: #27548A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+
+/* Butterfly styles */
+.butterfly {
+  position: absolute;
+  width: 500px;
+  z-index: 2;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.butterfly-left {
+  top: 20%;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+
+.butterfly-right {
+  bottom: 15%;
+  right: 5%;
+  transform: rotate(10deg);
+}
+
+
+
+
+
+
+
