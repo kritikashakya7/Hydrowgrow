@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import "../css/Home.css";
 import {
   CircleAlert,
@@ -14,7 +15,33 @@ import Footer from "../Components/Footer";
 import bgimg from '../Assets/bgimg.jpg';
 import aku from '../Assets/aku.mp4';
 
-function Home() {
+const Home = () => {
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(Array(6).fill(false));
+
+  const cropData = [
+    { title: "Lettuce", details: "Grow lettuce using a hydroponic tower by maintaining 6.0-6.5 pH, cool temperature, and 10-14 hours of light." },
+    { title: "Mint", details: "Mint grows well in hydro towers with 5.5-6.0 pH, frequent harvesting, and medium light." },
+    { title: "Spinach", details: "Keep spinach in cooler environments, 6.0-7.5 pH, and harvest within 4-6 weeks." },
+    { title: "Cilantro", details: "Use 6.5 pH, low humidity, and LED lighting for better yield in towers." },
+    { title: "Oregano", details: "Grows best in 6.0-7.0 pH with 6-8 hours of direct light in towers." },
+    { title: "Chives", details: "Requires nutrient-rich water, 6.0-6.5 pH, and good airflow to grow well." },
+  ];
+
+  const toggleMore = (i) => {
+    const updated = [...showMore];
+    updated[i] = !updated[i];
+    setShowMore(updated);
+  };
+
+  const nextSlide = () => {
+    if (index < cropData.length - 3) setIndex(index + 3);
+  };
+
+  const prevSlide = () => {
+    if (index >= 3) setIndex(index - 3);
+  };
+
   return (
     <>
       <motion.div
@@ -39,12 +66,7 @@ function Home() {
               backgroundPosition: "center",
             }}
           >
-            <div className="vid-overlay">
-              <video width="100%" autoPlay loop muted>
-                <source src="aku.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+           
 
             <div className="intro">
               <h1>Hydrowgrow: IoT for Hydroponic Farming</h1>
@@ -60,7 +82,6 @@ function Home() {
           </div>
         </motion.div>
 
-     
         <div className="about-us-section">
           <div className="about-text">
             <h2><Sprout color="#4bd530" size={30}/>Get to Know Us</h2>
@@ -83,8 +104,7 @@ function Home() {
         <div className="features">
           <h1>Key Features</h1>
           <div className="feature-container">
-            {[
-              {
+            {[{
                 title: "Alert System",
                 icon: <CircleAlert color="red" size={25} />,
                 desc: "Receive real-time notifications about critical changes in your system, ensuring immediate action when necessary.",
@@ -113,9 +133,7 @@ function Home() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2>
-                  {item.title} {item.icon}
-                </h2>
+                <h2>{item.title} {item.icon}</h2>
                 <p>{item.desc}</p>
               </motion.div>
             ))}
@@ -159,11 +177,32 @@ function Home() {
         </div>
       </motion.div>
 
+      <div className="what-grow-section">
+        <h2 className="what-grow-title">What Can We Grow</h2>
+
+        <div className="slider-controls">
+          <button onClick={prevSlide}><ChevronLeft /></button>
+          <button onClick={nextSlide}><ChevronRight /></button>
+        </div>
+
+        <div className="grow-slider">
+          {cropData.slice(index, index + 3).map((item, i) => (
+            <div className="grow-card" key={i}>
+              <h3>{item.title}</h3>
+              <button className="more-btn" onClick={() => toggleMore(i + index)}>
+                {showMore[i + index] ? "Hide" : "More"}
+              </button>
+              {showMore[i + index] && <p className="grow-details">{item.details}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="footer">
         <Footer />
       </div>
     </>
   );
-}
+};
 
 export default Home;

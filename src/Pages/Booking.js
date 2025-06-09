@@ -3,7 +3,7 @@ import '../css/Booking.css';
 import Navbar from "../Components/Navbar"; 
 import Footer from "../Components/Footer"; 
 import { useNavigate } from 'react-router-dom';
-import flowerGif from '../Assets/flower.gif'; // ✅ Import flower gif
+import flowerGif from '../Assets/flower.gif';
 
 const Booking = () => {
   const [selectedDate, setSelectedDate] = useState('');
