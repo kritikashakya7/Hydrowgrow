@@ -4,8 +4,7 @@
   import { Link } from "react-router-dom";
   import Footer from "../Components/Footer"; 
   import { motion } from "framer-motion";
-  import butterfly from '../Assets/butterfly.gif'; 
-  import grass from '../Assets/grass.gif';
+
 
 
   const Signup = () => {
@@ -20,8 +19,6 @@
  
 
   <div className="signup-page">
-  <img src={butterfly} alt="Butterfly" className="butterfly butterfly-left" />
-  <img src={butterfly} alt="Butterfly" className="butterfly butterfly-right" />
 
   <div className="signup-card">
     <h2 className="signup-title">Create an Account</h2>
