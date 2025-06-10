@@ -12,8 +12,19 @@ const Booking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const today = new Date();
+    const selected = new Date(selectedDate);
+    selected.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
+
     if (!selectedDate || !selectedTime) {
       alert('Please select both date and time.');
+      return;
+    }
+
+    if (selected < today) {
+      alert('You cannot book a demo for a past date.');
       return;
     }
 
@@ -37,6 +48,7 @@ const Booking = () => {
                 type="date"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
+                min={new Date().toISOString().split('T')[0]} // disable past dates in UI
                 required
               />
             </label>
