@@ -9,6 +9,8 @@ import Footer from "./Components/Footer";
 import Booking from "./Pages/Booking";
 import Order from "./Pages/Order";
 import Guide from "./Pages/Guide";
+import Admin from "./Pages/Admin/Admin";
+import AdminLogin from "./Pages/Admin/Adminlogin";
 
 
 const App = () => {
@@ -23,7 +25,9 @@ const App = () => {
         <Route path="/footer" element={<Footer />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/order" element={<Order/>} />
-        <Route path="/guide" element={<Guide/>} />         
+        <Route path="/guide" element={<Guide/>} />      
+         <Route path="/admin" element={<Admin/>} />    
+         <Route path="/adminlogin" element={<AdminLogin/>} /> 
       </Routes>
     </Router>
   );
