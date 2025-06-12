@@ -1,0 +1,180 @@
+.signup-page {
+  background-color: #ffffff;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  padding-top: 0px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.signup-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.signup-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.button {
+  background-color: #7994b5;
+  color: rgb(15, 15, 15);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #27548A;
+  transform: scale(1.03);
+}
+
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+
+
+.sign-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Overlays */
+.signup-background-overlay::before,
+.signup-background-overlay::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+/* Butterfly Gif */
+.butterfly-gif {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Reuse login card styles */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-card {
+  background-color: #f9f9f9;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  z-index: 1;
+  position: relative;
+}
+
+.signup-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+
+.signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #7994b5;
+  color: rgb(15, 15, 15);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #27548A;
+  transform: scale(1.05);
+}
+
+.login-redirect {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.login-redirect a {
+  color: #27548A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-redirect a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+

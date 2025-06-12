@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "../Components/Navbar"; 
-import "../css/Components.css";
+import "../css/Items.css";
 import ldr from '../Assets/ldr.jpeg';
 import dht11 from '../Assets/dht11.jpeg';
 import soil from '../Assets/soil.jpg';
@@ -9,7 +9,7 @@ import buzz from '../Assets/buzz.png';
 import Footer from "../Components/Footer"; 
 import { motion } from "framer-motion";
 
-const ComponentsPage = () => {
+const ItemsPage = () => {
   return (
     <><motion.div
       className="components-page"
@@ -98,4 +98,4 @@ const ComponentsPage = () => {
   );
 };
 
-export default ComponentsPage;
+export default ItemsPage;
