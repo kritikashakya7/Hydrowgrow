@@ -38,7 +38,6 @@ const Login = () => {
         </Link>
       </p>
     </div>
-    <img src={grass} alt="Grass" className="grass-image" />
   </div>
 </motion.div>
 

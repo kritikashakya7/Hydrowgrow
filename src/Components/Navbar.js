@@ -8,9 +8,8 @@ const Navbar = () => {
       <h2 className="logo">HydroGrow</h2>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/Items">Components</Link></li>
          <li><Link to="/Guide">Guide</Link></li>
-        <li><Link to="/Booking">Contact</Link></li>
+        <li><Link to="/Booking">Demo</Link></li>
         
  <li>
     <Link to="/Signup" className="order-now-btn">

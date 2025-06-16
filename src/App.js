@@ -13,7 +13,6 @@ import AdminLogin from "./Pages/Admin/Adminlogin";
 import Adminsignup from "./Pages/Admin/Adminsignup";
 import AdminOrder from "./Pages/Admin/AdminOrder";
 import Sidebar from "./Components/Sidebar";
-import ItemsPage from "./Pages/Items";
 import Customers from "./Pages/Admin/Customers";
 
 
@@ -33,8 +32,7 @@ const App = () => {
          <Route path="/adminlogin" element={<AdminLogin/>} /> 
           <Route path="/adminsignup" element={<Adminsignup/>} /> 
              <Route path="/adminorder" element={<AdminOrder/>} /> 
-              <Route path="/sidebar" element={<Sidebar/>} /> 
-              <Route path="/items" element={<ItemsPage/>} /> 
+              <Route path="/sidebar" element={<Sidebar/>} />
               <Route path="/customers" element = {<Customers/>} />
         
          
