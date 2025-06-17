@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .booking-wrapper {
   display: flex;
   justify-content: center;
@@ -22,7 +23,7 @@
   background: #f9f9f9;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'DM Sans', sans-serif;
+ font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
@@ -33,6 +34,7 @@
 }
 
 .booking-form label {
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #555;
   text-align: left;
@@ -56,19 +58,3 @@
   margin-top: 4px;
 }
 
-.login-btn {
-  background-color: #7994b5;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.login-btn:hover {
-  background-color: #27548A;
-  transform: scale(1.05);
-}

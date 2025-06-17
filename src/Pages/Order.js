@@ -4,6 +4,7 @@ import buzz from '../Assets/buzz.png';
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
+import Button from "../Components/Button"; 
 
 const Buy = () => {
   const [quantity, setQuantity] = useState(1);
@@ -46,7 +47,7 @@ const Buy = () => {
 
             <p className="product-price">Rs. {totalPrice}</p>
 
-            <button className="signup-btn" onClick={handleBuy}>Buy</button>
+           <Button type="submit">Buy</Button>
           </div>
         </div>
       </motion.div>

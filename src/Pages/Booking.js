@@ -5,13 +5,16 @@ import Footer from "../Components/Footer";
 import { useNavigate } from 'react-router-dom';
 import flowerGif from '../Assets/flower.gif';
 import { motion } from 'framer-motion';
+import Button from "../Components/Button"; 
+
+// ✅ Create a motion-enhanced version of the Button
+const MotionButton = motion(Button);
 
 const Booking = () => {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const navigate = useNavigate();
 
-  // Get tomorrow's date in YYYY-MM-DD format
   const getTomorrowDate = () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -100,14 +103,14 @@ const Booking = () => {
               <span className="time-note">(Available from 10:00 AM to 5:00 PM)</span>
             </label>
 
-            <motion.button
+            {/* ✅ Animated custom button */}
+            <MotionButton
               type="submit"
-              className="login-btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Book Now
-            </motion.button>
+            </MotionButton>
           </form>
         </motion.div>
       </motion.div>

@@ -4,6 +4,7 @@
   import { Link } from "react-router-dom";
   import Footer from "../Components/Footer"; 
   import { motion } from "framer-motion";
+  import Button from "../Components/Button"; 
 
 
 
@@ -27,10 +28,10 @@
       <input type="email" placeholder="Email Address" required />
       <input type="password" placeholder="Password" required />
       <input type="password" placeholder="Confirm Password" required />
-      <button type="submit" className="button">Sign Up</button>
+       <Button type="submit">Signup</Button>
     </form>
     <p className="login-redirect">
-      Already have an account? <Link to="/Login" style={{ color: '#27548A' }}>Login</Link>
+      Already have an account? <Link to="/Login" style={{ color: '#3D873A' }}>Login</Link>
     </p>
   </div>
 </div>

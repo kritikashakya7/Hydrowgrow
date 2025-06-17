@@ -14,6 +14,7 @@ import Adminsignup from "./Pages/Admin/Adminsignup";
 import AdminOrder from "./Pages/Admin/AdminOrder";
 import Sidebar from "./Components/Sidebar";
 import Customers from "./Pages/Admin/Customers";
+import Button from "./Components/Button";
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
              <Route path="/adminorder" element={<AdminOrder/>} /> 
               <Route path="/sidebar" element={<Sidebar/>} />
               <Route path="/customers" element = {<Customers/>} />
+                 <Route path="/button" element = {<Button/>} />
         
          
       </Routes>

@@ -1,3 +1,4 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
  .footer {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +9,7 @@
   padding: 20px 40px;
   box-sizing: border-box;
   border-top: 1px solid #1f252e;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .footer-logo {
@@ -16,6 +17,7 @@
   align-items: center;
   gap: 10px;
   color: #fff;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
@@ -29,6 +31,7 @@
 
 .footer-nav a {
   color: #e4e4e4;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -45,13 +48,13 @@
 }
 
 .footer-social a {
+  font-family: 'Poppins', sans-serif;
   color: #c0c0c0;
   font-size: 20px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #ffa366;
   transform: scale(1.2);
 }
 
@@ -60,6 +63,7 @@
   text-align: center;
   font-size: 14px;
   color: #888;
+  font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   border-top: 1px solid #1f252e;
   padding-top: 16px;

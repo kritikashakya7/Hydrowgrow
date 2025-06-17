@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../../css/Admincss/Adminsignup.css";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import Button from "../../Components/Button";
+
+
 
 const Adminsignup = () => {
   const navigate = useNavigate();
@@ -78,7 +81,7 @@ const Adminsignup = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
             />
-            <button type="submit" className="button">Sign Up</button>
+             <Button type="submit">Signup</Button>
           </form>
           <p className="login-redirect">
             Already have an account? <Link to="/AdminLogin" style={{ color: '#27548A' }}>Login</Link>

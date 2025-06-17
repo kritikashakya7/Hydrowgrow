@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -25,8 +26,9 @@
   }
   
   .nav-links a {
+      font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #183B4E;
+    color: white;
     font-weight: 700;
     font-size: 1.1rem;
     margin-right: 20px;
@@ -34,14 +36,15 @@
   }
   
   .nav-links li a:hover {
-    color: #3e89b2;
+    color: #3D873A;
   }
 
   .order-now-btn {
-  color: #183B4E;
+      font-family: 'Poppins', sans-serif;
+  color: #ffffff;
   font-weight: bold;
   font-size: 18px;
-  background-color: #7994b5;
+  background-color: #52AE77FF;
   padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
@@ -50,7 +53,7 @@
 }
 
 .order-now-btn:hover {
-  background-color: #adc2dc; /* Darker shade on hover */
+  background-color: #499B6AFF;
 }
 
 

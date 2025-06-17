@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .buy-card {
   max-width: 700px;
   margin: 12%;
@@ -7,7 +8,7 @@
   background-color: #f9f9f9;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  font-family: 'DM Sans', sans-serif;
+   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
 
@@ -41,7 +42,7 @@
 }
 
 .quantity-control button {
-  background-color: #7994b5;
+  background-color:#3D873A;
   color: white;
   border: none;
   padding: 10px 16px;
