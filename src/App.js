@@ -16,7 +16,6 @@ import Sidebar from "./Components/Sidebar";
 import Customers from "./Pages/Admin/Customers";
 import Button from "./Components/Button";
 
-
 const App = () => {
   return (
     <Router>
@@ -36,7 +35,6 @@ const App = () => {
               <Route path="/sidebar" element={<Sidebar/>} />
               <Route path="/customers" element = {<Customers/>} />
                  <Route path="/button" element = {<Button/>} />
-        
          
       </Routes>
     </Router>

@@ -7,7 +7,6 @@ import flowerGif from '../Assets/flower.gif';
 import { motion } from 'framer-motion';
 import Button from "../Components/Button"; 
 
-// ✅ Create a motion-enhanced version of the Button
 const MotionButton = motion(Button);
 
 const Booking = () => {
@@ -54,14 +53,6 @@ const Booking = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.img 
-          src={flowerGif} 
-          alt="Flower" 
-          className="booking-gif"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        />
 
         <motion.div 
           className="booking-container"
@@ -103,7 +94,7 @@ const Booking = () => {
               <span className="time-note">(Available from 10:00 AM to 5:00 PM)</span>
             </label>
 
-            {/* ✅ Animated custom button */}
+           
             <MotionButton
               type="submit"
               whileHover={{ scale: 1.05 }}

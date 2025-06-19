@@ -6,17 +6,7 @@
     background-color: #ffffff;
     padding: 1rem 3rem; 
     width: 97%;
-    height: 10%;
-   
-
-   
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-right: 1%;
-    margin-left: 2px;
+    height: 10%;   
   }
   
   .nav-links {
@@ -55,6 +45,18 @@
 .order-now-btn:hover {
   background-color: #499B6AFF;
 }
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 70px; 
+  width: 50px;
+  object-fit: contain;
+}
+
 
 
   
