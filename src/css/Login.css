@@ -1,66 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.login-page {
-    background-color: #ffffff;
-    height: 900vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding-top: 80px; 
-    margin: 4.5%;
-  }
-  
-  
-  .login-card {
-    background-color: #f9f9f9;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 3rem;
-    width: 900%;
-    max-width: 4000px;
-  }
-  
-  .login-title {
-      font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .login-form input {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
 
-  .signup-redirect {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.95rem;
-  }
-  
-  .signup-redirect a {
-    color: #52AE77FF;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .signup-redirect a:hover {
-    text-decoration: underline;
-  }
-  
-  .login-wrapper {
+.login-page {
+  background-color: #ffffff;
+  min-height: 10vh; /* Use viewport height instead of huge 900vh */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 4rem; /* reduced side padding for smaller screens */
+  box-sizing: border-box;
+  padding-top: 80px; 
+  margin: 3.5%;
+  overflow: hidden;
+}
+
+.login-card {
+  background-color: #f9f9f9;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 400px; /* Set max width to a reasonable size */
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-weight: 600; /* slight boldness for better readability */
+}
+
+.login-form input {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #52AE77FF; /* subtle focus effect matching your link color */
+}
+
+.signup-redirect {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.signup-redirect a {
+  color: #52AE77FF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.3s ease;
+}
+
+.signup-redirect a:hover {
+  text-decoration: underline;
+}
+
+.login-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
-
 

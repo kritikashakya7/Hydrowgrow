@@ -10,13 +10,21 @@ import { Eye, EyeOff } from "lucide-react";
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    navigate('/Order');
+    if (email && password) {
+      // Store user session
+      localStorage.setItem("sessionUser", JSON.stringify({ email }));
+      navigate("/Order");
+    } else {
+      alert("Please enter email and password.");
+    }
   };
 
   const togglePasswordVisibility = () => {
-    setShowPassword(prev => !prev);
+    setShowPassword((prev) => !prev);
   };
 
   return (
@@ -28,9 +36,11 @@ const Login = () => {
         transition={{ duration: 1 }}
       >
         <Navbar />
+
         <div className="login-wrapper">
-          <div className="login-card">
+          <div className="booking-container">
             <h2 className="login-title">Welcome Back</h2>
+
             <form
               className="login-form"
               onSubmit={(e) => {
@@ -38,26 +48,34 @@ const Login = () => {
                 handleLogin();
               }}
             >
-              <input type="email" placeholder="Email Address" required />
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
-              <div className="password-input-wrapper" style={{ position: 'relative' }}>
+              <div className="password-input-wrapper" style={{ position: "relative" }}>
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Password"
                   required
-                  style={{ paddingRight: '0.5rem' }} // space for icon
+                  style={{ paddingRight: "2rem" }}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <span
                   onClick={togglePasswordVisibility}
                   style={{
-                    position: 'absolute',
-                    right: '0.75rem',
-                    top: '40%',
-                    transform: 'translateY(-50%)',
-                    cursor: 'pointer',
-                    color: '#52AE77FF'
+                    position: "absolute",
+                    right: "0.75rem",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                    color: "#52AE77FF",
                   }}
-                  aria-label={showPassword ? "Show password" : "Hide password"}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </span>
@@ -67,9 +85,9 @@ const Login = () => {
             </form>
 
             <p className="signup-redirect">
-              Forgot password?{" "}
-              <Link to="/" style={{ color: '#52AE77FF' }}>
-                Click here
+              Don't have an account?{" "}
+              <Link to="/Signup" style={{ color: "#52AE77FF" }}>
+                Signup!
               </Link>
             </p>
           </div>

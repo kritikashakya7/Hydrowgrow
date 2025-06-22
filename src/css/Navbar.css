@@ -33,18 +33,17 @@
       font-family: 'Poppins', sans-serif;
   color: #ffffff;
   font-weight: bold;
-  font-size: 18px;
-  background-color: #52AE77FF;
+  font-size: 9px;
+  background-color: rgb(255, 255, 255);
   padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin-right: 30px;
+  border: 2px solid #28a745;
+  color: #28a745; 
 }
 
-.order-now-btn:hover {
-  background-color: #499B6AFF;
-}
 
 .navbar-logo {
   display: flex;
@@ -55,6 +54,7 @@
   height: 70px; 
   width: 50px;
   object-fit: contain;
+  margin-left: 30px;
 }
 
 
