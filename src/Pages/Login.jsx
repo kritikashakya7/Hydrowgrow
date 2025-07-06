@@ -6,21 +6,17 @@ import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
 import Button from "../Components/Button";
 import { Eye, EyeOff } from "lucide-react";
-
+import { loginUser } from "../Services/auth";
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    if (email && password) {
-      // Store user session
-      localStorage.setItem("sessionUser", JSON.stringify({ email }));
-      navigate("/Order");
-    } else {
-      alert("Please enter email and password.");
-    }
+  const handleLogin = async () => {
+    const response = await loginUser(email, password);
+    localStorage.setItem("sessionUser", response.token);
+    navigate("/Order");
   };
 
   const togglePasswordVisibility = () => {
@@ -56,7 +52,10 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
 
-              <div className="password-input-wrapper" style={{ position: "relative" }}>
+              <div
+                className="password-input-wrapper"
+                style={{ position: "relative" }}
+              >
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Password"
