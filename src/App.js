@@ -15,6 +15,7 @@ import AdminOrder from "./Pages/Admin/AdminOrder";
 import Sidebar from "./Components/Sidebar";
 import Customers from "./Pages/Admin/Customers";
 import Button from "./Components/Button";
+import Success from "./Pages/Sucess";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
               <Route path="/sidebar" element={<Sidebar/>} />
               <Route path="/customers" element = {<Customers/>} />
                  <Route path="/button" element = {<Button/>} />
+                 <Route path="/sucess" element = {<Success/>} />
          
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Signup.css";
 import Navbar from "../Components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";  // combined imports
 import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
 import Button from "../Components/Button";
@@ -9,17 +9,25 @@ import { signup } from "../Services/auth";
 import { useForm } from "react-hook-form";
 
 const Signup = () => {
+  const navigate = useNavigate();  // <-- Add this line here
+
   const {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors },  
   } = useForm();
 
   const onSubmit = async (data) => {
     const { fullname, email, password } = data;
-    await signup(fullname, email, password);
+    try {
+      await signup(fullname, email, password);
+      navigate("/Login");  // <-- this will now work correctly
+    } catch (error) {
+      console.error("Signup failed:", error);
+    }
   };
+
   return (
     <>
       <Navbar />

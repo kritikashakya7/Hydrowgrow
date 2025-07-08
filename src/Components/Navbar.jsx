@@ -33,7 +33,7 @@ const Navbar = () => {
         <li><Link to="/Guide">Guide</Link></li>
         <li><Link to="/Booking">Demo</Link></li>
         <li>
-          <Link to="/Signup" className="order-now-btn">Order Now</Link>
+          <Link to="/Order" className="order-now-btn">Order Now</Link>
           {isLoggedIn ? (
             <Link to ="/Login" onClick={handleLogout} className="order-now-btn" style={{ backgroundColor: "#ffffff", border: "2px solid #52AE77" }}>
               Logout
