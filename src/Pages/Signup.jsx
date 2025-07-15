@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/Signup.css";
 import Navbar from "../Components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
 import Button from "../Components/Button";
 import { signup } from "../Services/auth";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../Context/authContext";
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const { token } = useAuth();
   const {
     register,
     handleSubmit,
@@ -16,9 +19,19 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
+  useEffect(() => {
+    if (token) {
+      navigate("/"); // or navigate("/order") if that makes more sense
+    }
+  }, [token, navigate]);
   const onSubmit = async (data) => {
     const { fullname, email, password } = data;
-    await signup(fullname, email, password);
+    try {
+      await signup(fullname, email, password);
+      navigate("/login"); // ✅ redirect to login after signup
+    } catch (err) {
+      console.error("Signup failed:", err);
+    }
   };
   return (
     <>

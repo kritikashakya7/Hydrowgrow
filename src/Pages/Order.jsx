@@ -1,6 +1,6 @@
-import React from 'react';
-import '../css/Order.css';
-import buzz from '../Assets/buzz.png';
+import React from "react";
+import "../css/Order.css";
+import buzz from "../Assets/buzz.png";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ const Buy = () => {
   return (
     <>
       <Navbar />
-      
+
       <motion.div
         className="order-page"
         initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,9 @@ const Buy = () => {
           <div className="product-info">
             <h2 className="product-name">Eco Bloom</h2>
             <p className="product-price">Rs. {price}</p>
-            <Button type="button" onClick={handleBuy}>Buy</Button>
+            <Button type="button" onClick={handleBuy}>
+              Buy
+            </Button>
           </div>
         </div>
       </motion.div>

@@ -5,6 +5,7 @@ import authRoutes from "./routes/authRoutes.js";
 import demoRoute from "./routes/demoRoute.js";
 import dotenv from "dotenv";
 import cors from "cors";
+import orderRoute from "./routes/orderRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -21,6 +22,7 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/demo", demoRoute);
+app.use("/api/order", orderRoute);
 
 connectDB(); // connect to MongoDB
 
