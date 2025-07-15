@@ -1,4 +1,4 @@
-// controllers/mailController.js
+
 import nodemailer from "nodemailer";
 
 export const sendMail = async (req, res) => {
@@ -7,12 +7,12 @@ export const sendMail = async (req, res) => {
     if (!date || !time)
       return res.status(400).json({ message: "Date and time required" });
     const user = req.user;
-    // Configure transporter
+   
     const transporter = nodemailer.createTransport({
-      service: "gmail", // e.g. 'gmail' or use host/port for SMTP
+      service: "gmail", 
       auth: {
         user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS, // use app password, NOT your Gmail password
+        pass: process.env.GMAIL_PASS, 
       },
     });
 

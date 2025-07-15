@@ -33,6 +33,7 @@ const Signup = () => {
       console.error("Signup failed:", err);
     }
   };
+
   return (
     <>
       <Navbar />
