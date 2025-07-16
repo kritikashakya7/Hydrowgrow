@@ -8,12 +8,12 @@ const api = axios.create({
   },
   withCredentials: true, // If you're handling cookies (optional)
 });
+
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("sessionUser");
-    console.log(token);
+    const token = localStorage.getItem("token");
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`; // 🔐 Attach JWT token
+      config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
@@ -21,4 +21,20 @@ api.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (
+      error.response &&
+      (error.response.status === 401 || error.response.status === 403)
+    ) {
+      localStorage.removeItem("token");
+
+      window.location.href = "/login";
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default api;

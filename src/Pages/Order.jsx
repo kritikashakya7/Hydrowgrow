@@ -5,12 +5,18 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { motion } from "framer-motion";
 import Button from "../Components/Button";
+import { order } from "../Services/order";
 
 const Buy = () => {
   const price = 15000;
+  const handleBuy = async () => {
+    const response = await order();
 
-  const handleBuy = () => {
-    alert(`You bought Eco Bloom for Rs. ${price}`);
+    if (response.success) {
+      const url = response.data.paymentUrl;
+
+      window.location.href = url;
+    }
   };
 
   return (

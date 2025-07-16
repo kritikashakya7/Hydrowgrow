@@ -17,6 +17,8 @@ import Customers from "./Pages/Admin/Customers";
 import Button from "./Components/Button";
 import { useAuth } from "./Context/authContext";
 import PrivateRoute from "./Components/privateRoutes";
+import PaymentFail from "./Pages/PaymentFail";
+import PaymentSuccess from "./Pages/PaymentSuccess";
 
 const App = () => {
   const { token } = useAuth();
@@ -28,6 +30,8 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/guide" element={<Guide />} />
+        <Route path="/payment-fail" element={<PaymentFail />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
 
         {/* Protected routes */}
         <Route
