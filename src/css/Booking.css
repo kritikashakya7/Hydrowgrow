@@ -1,20 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.booking-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-left: 15rem;
-  padding: 20px;
-  max-width: 1000px;
-  margin-top: 12%;
-  margin-bottom: 7%;
-}
 
 .booking-container {
   width: 500px;
   padding: 30px;
   background: #f9f9f9;
+  margin-right: 50%;
+  margin-left: 50%;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
  font-family: 'Poppins', sans-serif;

@@ -2,11 +2,11 @@
 
 .login-page {
   background-color: #ffffff;
-  min-height: 10vh; /* Use viewport height instead of huge 900vh */
+  min-height: 10vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem 4rem; /* reduced side padding for smaller screens */
+  padding: 2rem 1rem 4rem; 
   box-sizing: border-box;
   padding-top: 80px; 
   margin: 3.5%;
@@ -20,7 +20,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 3rem;
   width: 100%;
-  max-width: 400px; /* Set max width to a reasonable size */
+  max-width: 400px;
   box-sizing: border-box;
 }
 
@@ -30,7 +30,7 @@
   margin-bottom: 1.5rem;
   text-align: center;
   color: #333;
-  font-weight: 600; /* slight boldness for better readability */
+  font-weight: 600; 
 }
 
 .login-form input {
@@ -47,7 +47,7 @@
 
 .login-form input:focus {
   outline: none;
-  border-color: #52AE77FF; /* subtle focus effect matching your link color */
+  border-color: #52AE77FF; 
 }
 
 .signup-redirect {

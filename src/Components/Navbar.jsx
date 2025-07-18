@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
 import logo from "../Assets/logo.png";
@@ -9,16 +9,11 @@ const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { logout, token } = useAuth();
 
-  // Check session on component mount
-  // useEffect(() => {
-  //   const user = localStorage.getItem("sessionUser");
-  //   setIsLoggedIn(!!user);
-  // }, []);
-
-  // Handle logout
+  // Optional: Handle logout logic
   const handleLogout = () => {
     localStorage.removeItem("sessionUser");
-    setIsLoggedIn(false); // update state
+    setIsLoggedIn(false);
+    logout(); // Make sure this calls your auth context logout
     navigate("/Login");
   };
 
@@ -39,27 +34,31 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/Booking">Demo</Link>
+          
         </li>
         <li>
-          <Link to="/Order" className="order-now-btn">
-            Order Now
-          </Link>
+         <Link to="/Order" style={{ color: "#52AE77" }}>
+        Order Now
+        </Link>
+
+        </li>
+        <li>
           {token ? (
-            <button
-              to="/Login"
-              onClick={logout}
-              className="order-now-btn"
-              style={{
-                backgroundColor: "#ffffff",
-                border: "2px solid #52AE77",
-              }}
-            >
-              Logout
-            </button>
-          ) : (
-            <Link to="/Login" className="order-now-btn">
-              Login
-            </Link>
+        <Link
+       to="/login"
+  onClick={handleLogout}
+  style={{ color: "#52AE77" }}
+>
+  Logout
+</Link>
+) : (
+<Link
+  to="/login"
+  style={{ color: "#52AE77" }}
+>
+  Login
+</Link>
+
           )}
         </li>
       </ul>

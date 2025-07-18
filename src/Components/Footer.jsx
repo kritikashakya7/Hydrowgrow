@@ -20,10 +20,10 @@ const Footer = () => {
       </nav>
 
       <div className="footer-social">
-        <a href="#"><i><Facebook color="#5710da" size={40}  /></i></a>
-        <a href="#"><i ><Instagram color="#d66b6b" size={40}  /></i></a>
-        <a href="#"><i><Youtube color="#ef0b0b" size={40} /></i></a>
-        <a href="#"><i><Twitter color="#0bc1ef" size={40} /></i></a>
+        <a href="www.facebook.com"><i><Facebook color="#5710da" size={40}  /></i></a>
+        <a href="www.instagram.com"><i ><Instagram color="#d66b6b" size={40}  /></i></a>
+        <a href="www.youtube.com"><i><Youtube color="#ef0b0b" size={40} /></i></a>
+        <a href="www.x.com"><i><Twitter color="#0bc1ef" size={40} /></i></a>
       
       </div>
 
